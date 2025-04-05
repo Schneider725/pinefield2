@@ -6,6 +6,9 @@ import Navbar from "./Navbar.jsx";
 function App(){
     let Component
     switch(window.location.pathname){
+        case"/home":
+            Component = Field()
+            break
         case"/pinegrove":
             Component = Pine()
             break
