@@ -2,6 +2,7 @@ import Display from "./Display.jsx";
 import Field from "./pages/Field.jsx";
 import Pine from "./pages/Pine.jsx";
 import './index.css'
+import Navbar from "./Navbar.jsx";
 function App(){
     let Component
     switch(window.location.pathname){
@@ -14,7 +15,7 @@ function App(){
     return(
         <>
             <div className={"container"}>
-                <button className={"container"} onClick={() => setCount((count) => (count + 1) % albumData.length)}>Change Artist</button>
+                <Navbar />
                 <Display link={Component.link} artist={Component.artist} albums={Component.albums} />
             </div>
         </>
