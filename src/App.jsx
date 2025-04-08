@@ -1,6 +1,7 @@
 import Display from "./Display.jsx";
 import Field from "./pages/Field.jsx";
 import Pine from "./pages/Pine.jsx";
+import Dijon from "./pages/Dijon.jsx"
 import './index.css'
 import Navbar from "./Navbar.jsx";
 function App(){
@@ -14,6 +15,9 @@ function App(){
             break
         case"/fieldmedic":
             Component = Field()
+            break
+        case"/dijon":
+            Component = Dijon()
     }
     return(
         <>
