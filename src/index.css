@@ -79,19 +79,19 @@ li{
 .albumCover{
   height: 500px;
 }
-.nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav ul{
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-.nav a {
-  text-decoration: none;
-}
+/*.nav{*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*}*/
+/*.nav ul{*/
+/*  display: flex;*/
+/*  gap: 2rem;*/
+/*  list-style: none;*/
+/*}*/
+/*.nav a {*/
+/*  text-decoration: none;*/
+/*}*/
 .title{
   font-size: 3rem;
 }
@@ -100,5 +100,72 @@ li{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+/*.navLinks.open *{*/
+/*  display: flex;*/
+/*  opacity: 100;*/
+/*}*/
+/*.navLinks * {*/
+/*  opacity: 0;*/
+
+/*}*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.title {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  opacity: 0;
+}
+.navLinks.open {
+  opacity: 100;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  font-size: 1rem;
+  background: none;
+  cursor: pointer;
+  border: none;
+  /*display: none; !* hidden by default (for desktop) *!*/
+}
+
+/* Responsive Burger Menu */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  button {
+    display: block;
+  }
 }
 
